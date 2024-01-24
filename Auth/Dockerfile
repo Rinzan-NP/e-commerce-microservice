@@ -17,5 +17,5 @@ COPY . /app/
 # Expose the port that the development server will run on
 EXPOSE 8000
 
-# Run the development server on port 8001
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Run migrations and then start the development server
+CMD ["bash", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]

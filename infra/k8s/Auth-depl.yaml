@@ -23,9 +23,9 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: posts
+    app: auth
   ports:
-    - name: posts
+    - name: auth
       protocol: TCP
       port: 8000
       targetPort: 8000
